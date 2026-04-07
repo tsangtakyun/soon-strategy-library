@@ -27,6 +27,15 @@ function NavBar() {
         SOON INTERNAL
       </Link>
       <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <a href="https://idea-brainstorm.vercel.app" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
+          Idea Collection
+        </a>
+        <a href="https://script-generator-xi.vercel.app" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
+          Script Generator
+        </a>
+        <a href="https://soon-storyboard.vercel.app/storyboard" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
+          Shooting Guideline
+        </a>
         <Link href="/strategy-library" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
           Strategy Library
         </Link>
