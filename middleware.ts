@@ -43,7 +43,7 @@ export async function middleware(request: NextRequest) {
   }
 
   if (request.nextUrl.pathname === '/login' || request.nextUrl.pathname === '/') {
-    return NextResponse.redirect(new URL('/strategy-library', request.url))
+    return NextResponse.redirect(new URL('/marketing-dashboard', request.url))
   }
 
   return response

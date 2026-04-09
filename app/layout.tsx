@@ -36,6 +36,12 @@ function NavBar() {
         <a href="https://soon-storyboard.vercel.app/storyboard" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
           Shooting Guideline
         </a>
+        <Link href="/marketing-dashboard" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
+          Marketing Dashboard
+        </Link>
+        <Link href="/production-dashboard" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
+          Production Dashboard
+        </Link>
         <Link href="/strategy-library" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
           Strategy Library
         </Link>
