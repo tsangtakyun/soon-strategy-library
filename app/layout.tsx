@@ -2,11 +2,32 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'SOON Strategy Library',
-  description: 'SOON internal campaign strategy planning tool',
+  title: 'SOON 內部系統 · 策略資料庫',
+  description: 'SOON 內部策略與營運工作台',
 }
 
 function NavBar() {
+  const pillStyle = {
+    fontSize: '12px',
+    color: '#cdd2f3',
+    textDecoration: 'none',
+    padding: '8px 14px',
+    borderRadius: '999px',
+    border: '1px solid rgba(255,255,255,0.08)',
+    background: 'rgba(255,255,255,0.04)',
+    letterSpacing: '0.03em',
+    fontFamily: 'ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    whiteSpace: 'nowrap' as const,
+  }
+
+  const activePillStyle = {
+    ...pillStyle,
+    color: '#f7f8ff',
+    border: '1px solid rgba(130,126,255,0.45)',
+    background: 'linear-gradient(135deg, rgba(111,107,255,0.28), rgba(111,107,255,0.12))',
+    boxShadow: '0 12px 28px rgba(111,107,255,0.18)',
+  }
+
   return (
     <nav style={{
       position: 'fixed',
@@ -14,37 +35,32 @@ function NavBar() {
       left: 0,
       right: 0,
       zIndex: 1000,
-      backgroundColor: '#F5F2EC',
-      borderBottom: '1px solid #e0ddd6',
+      background: 'rgba(28, 31, 54, 0.94)',
+      borderBottom: '1px solid rgba(255,255,255,0.06)',
+      backdropFilter: 'blur(18px)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      padding: '0 32px',
-      height: '54px',
-      fontFamily: 'Georgia, Times New Roman, serif',
+      padding: '0 18px',
+      height: '64px',
     }}>
-      <Link href="/strategy-library" style={{ fontSize: '13px', letterSpacing: '0.16em', color: '#888', textDecoration: 'none' }}>
-        SOON INTERNAL
-      </Link>
-      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-        <a href="https://idea-brainstorm.vercel.app" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
-          Idea Collection
-        </a>
-        <a href="https://script-generator-xi.vercel.app" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
-          Script Generator
-        </a>
-        <a href="https://soon-storyboard.vercel.app/storyboard" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
-          Shooting Guideline
-        </a>
-        <Link href="/marketing-dashboard" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
-          Marketing Dashboard
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: 0 }}>
+        <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+          <span style={{ width: '11px', height: '11px', borderRadius: '999px', background: '#ff7b4d', display: 'inline-block' }} />
+          <span style={{ width: '11px', height: '11px', borderRadius: '999px', background: '#7b61ff', display: 'inline-block' }} />
+          <span style={{ width: '11px', height: '11px', borderRadius: '999px', background: '#5e8bff', display: 'inline-block' }} />
+        </div>
+        <Link href="/strategy-library" style={{ color: '#f7f8ff', fontSize: '15px', fontWeight: 700, fontFamily: 'ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+          SOON Internal
         </Link>
-        <Link href="/production-dashboard" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
-          Production Dashboard
-        </Link>
-        <Link href="/strategy-library" style={{ fontSize: '13px', color: '#1a1a1a', textDecoration: 'none', padding: '6px 14px', borderBottom: '1px solid #1a1a1a', letterSpacing: '0.03em' }}>
-          Strategy Library
-        </Link>
+      </div>
+      <div style={{ display: 'flex', gap: '8px', alignItems: 'center', overflowX: 'auto', paddingLeft: '12px' }}>
+        <a href="https://idea-brainstorm.vercel.app" style={pillStyle}>題材</a>
+        <a href="https://script-generator-xi.vercel.app" style={pillStyle}>劇本</a>
+        <a href="https://soon-storyboard.vercel.app/storyboard" style={pillStyle}>分鏡</a>
+        <a href="https://soon-strategy-library.vercel.app/strategy-library" style={activePillStyle}>策略</a>
+        <Link href="/marketing-dashboard" style={pillStyle}>Marketing</Link>
+        <Link href="/production-dashboard" style={pillStyle}>Production</Link>
       </div>
     </nav>
   )
@@ -53,7 +69,7 @@ function NavBar() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-HK">
-      <body style={{ margin: 0, padding: 0, paddingTop: '54px', background: '#f5f0e6' }}>
+      <body style={{ margin: 0, padding: 0, paddingTop: '64px', background: '#171a2f' }}>
         <NavBar />
         {children}
       </body>
