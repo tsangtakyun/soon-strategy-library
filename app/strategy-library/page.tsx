@@ -97,13 +97,13 @@ export default function StrategyLibraryPage() {
               <textarea
                 value={item.summary}
                 onChange={(e) => updateItem(section, item.id, { summary: e.target.value })}
-                placeholder="一句講清楚呢個 shape / angle / deliverable 係咩。"
+                placeholder="一句講清楚呢個策略形態、內容角度或交付組合係咩。"
                 style={{ width: '100%', minHeight: '82px', padding: '12px 14px', borderRadius: '14px', border: '1px solid rgba(255,255,255,0.10)', background: 'rgba(255,255,255,0.05)', color: '#f5f7ff', fontSize: '14px', boxSizing: 'border-box', resize: 'vertical', marginBottom: '10px' }}
               />
               <textarea
                 value={item.fitFor}
                 onChange={(e) => updateItem(section, item.id, { fitFor: e.target.value })}
-                placeholder="適合邊啲 campaign / budget / objective。"
+                placeholder="適合邊啲廣告目標、預算規模與合作情境。"
                 style={{ width: '100%', minHeight: '72px', padding: '12px 14px', borderRadius: '14px', border: '1px solid rgba(255,255,255,0.10)', background: 'rgba(255,255,255,0.05)', color: '#f5f7ff', fontSize: '14px', boxSizing: 'border-box', resize: 'vertical' }}
               />
             </div>
@@ -133,37 +133,37 @@ export default function StrategyLibraryPage() {
       <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
         <section style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '18px', marginBottom: '22px' }}>
           <div style={{ padding: '28px', borderRadius: '28px', background: 'rgba(34, 38, 68, 0.88)', border: '1px solid rgba(255,255,255,0.08)' }}>
-            <p style={{ margin: '0 0 8px', fontSize: '12px', letterSpacing: '0.18em', color: '#8e94ba' }}>INTERNAL SYSTEM</p>
+            <p style={{ margin: '0 0 8px', fontSize: '12px', letterSpacing: '0.18em', color: '#8e94ba' }}>內部系統</p>
             <h1 style={{ margin: '0 0 12px', fontSize: '50px', lineHeight: 1.02, fontWeight: 600 }}>
               策略資料庫
             </h1>
             <p style={{ margin: 0, maxWidth: '760px', fontSize: '18px', lineHeight: 1.7, color: '#c9cdec' }}>
-              呢頁俾 SOON internal team 定義同調整 `Budget Shape`、`Angle` 同 `Deliverable Shape`，之後 AI 分析就可以由同一套內部 library 生出嚟。
+              呢頁俾 SOON 內部團隊定義同調整預算形態、內容角度同交付組合，之後 AI 分析就可以由同一套內部資料庫生出嚟。
             </p>
           </div>
 
           <div style={{ padding: '24px', borderRadius: '28px', background: 'rgba(34, 38, 68, 0.96)', color: '#f5f0e6', border: '1px solid rgba(255,255,255,0.08)' }}>
-            <div style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#8e94ba', marginBottom: '10px' }}>HOW TO USE</div>
+            <div style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#8e94ba', marginBottom: '10px' }}>使用方式</div>
             <div style={{ display: 'grid', gap: '10px', fontSize: '15px', lineHeight: 1.7 }}>
-              <div>1. 先整理你想保留嘅 budget 策略類型</div>
-              <div>2. 再定義常用 angle 類別</div>
-              <div>3. 最後定 deliverable package 組合</div>
-              <div>4. 未來再接返 AI prompt / Supabase 持久化</div>
+              <div>1. 先整理你想保留嘅預算策略類型</div>
+              <div>2. 再定義常用內容角度類別</div>
+              <div>3. 最後設定交付組合</div>
+              <div>4. 之後再接回 AI 提示詞與資料持久化</div>
             </div>
             <button
               type="button"
               onClick={resetLibrary}
               style={{ marginTop: '18px', border: '1px solid rgba(255,255,255,0.20)', borderRadius: '999px', padding: '12px 16px', background: 'transparent', color: '#f5f0e6', cursor: 'pointer' }}
             >
-              重設做預設 library
+              重設為預設資料庫
             </button>
           </div>
         </section>
 
         <div style={{ display: 'grid', gap: '18px' }}>
-          {renderSection('budgetShapes', 'Budget Shapes', 'BUDGET STRATEGY', '新增 Budget Shape', 'budget')}
-          {renderSection('angleTypes', 'Angle Types', 'CONTENT ANGLE', '新增 Angle Type', 'angle')}
-          {renderSection('deliverableShapes', 'Deliverable Shapes', 'DELIVERABLE PACKAGE', '新增 Deliverable Shape', 'deliverable')}
+          {renderSection('budgetShapes', '預算形態', '預算策略', '新增預算形態', 'budget')}
+          {renderSection('angleTypes', '內容角度', '內容策略', '新增內容角度', 'angle')}
+          {renderSection('deliverableShapes', '交付組合', '交付配置', '新增交付組合', 'deliverable')}
         </div>
       </div>
     </main>

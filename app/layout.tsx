@@ -51,7 +51,7 @@ function NavBar() {
           <span style={{ width: '11px', height: '11px', borderRadius: '999px', background: '#5e8bff', display: 'inline-block' }} />
         </div>
         <Link href="/strategy-library" style={{ color: '#f7f8ff', fontSize: '15px', fontWeight: 700, fontFamily: 'ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-          SOON Internal
+          SOON 內部系統
         </Link>
       </div>
       <div style={{ display: 'flex', gap: '8px', alignItems: 'center', overflowX: 'auto', paddingLeft: '12px' }}>
@@ -59,8 +59,8 @@ function NavBar() {
         <a href="https://script-generator-xi.vercel.app" style={pillStyle}>劇本</a>
         <a href="https://soon-storyboard.vercel.app/storyboard" style={pillStyle}>分鏡</a>
         <a href="https://soon-strategy-library.vercel.app/strategy-library" style={activePillStyle}>策略</a>
-        <Link href="/marketing-dashboard" style={pillStyle}>Marketing</Link>
-        <Link href="/production-dashboard" style={pillStyle}>Production</Link>
+        <Link href="/marketing-dashboard" style={pillStyle}>營運</Link>
+        <Link href="/production-dashboard" style={pillStyle}>製作</Link>
       </div>
     </nav>
   )
