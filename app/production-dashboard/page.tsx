@@ -19,7 +19,7 @@ export default async function ProductionDashboardPage() {
             <p style={{ margin: '0 0 8px', fontSize: '12px', letterSpacing: '0.18em', color: '#8e94ba' }}>內部營運</p>
             <h1 style={{ margin: '0 0 12px', fontSize: '50px', lineHeight: 1.02, fontWeight: 600 }}>製作工作台</h1>
             <p style={{ margin: 0, maxWidth: '760px', fontSize: '18px', lineHeight: 1.7, color: '#c9cdec' }}>
-              呢頁俾製作主任接手已完成分鏡規劃嘅廣告。重點係睇邊啲專案已鎖定、等 WhatsApp 跟進拍攝細節、等水印版本、等尾數，最後先交正式版本。
+              呢頁俾製作主任接手已完成分鏡規劃嘅廣告。重點係睇邊啲專案已鎖定、等以 WhatsApp 跟進拍攝細節、等水印版本、等尾數，最後先交正式版本。
             </p>
           </section>
 
@@ -89,7 +89,7 @@ export default async function ProductionDashboardPage() {
                     {[
                       { label: '分鏡已完成', done: workflow.storyboardPlanningConfirmed },
                       { label: '交付已確認', done: workflow.deliveryConfirmationConfirmed },
-                      { label: 'WhatsApp 交接', done: workflow.deliveryConfirmationConfirmed },
+                      { label: 'WhatsApp 跟進', done: workflow.deliveryConfirmationConfirmed },
                       { label: '水印版本', done: false },
                       { label: '尾數付款', done: false },
                       { label: '正式交付', done: false },
